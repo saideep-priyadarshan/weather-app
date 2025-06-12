@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather</h1>
+      <div class="search-container">
+        <input type="text" id="city-search" placeholder="Enter city name..." />
+        <button id="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+
+      <div id="weather-result" class="hidden">
+        <div class="weather-card">
+          <div class="weather-header">
+            <h2 id="city-name"></h2>
+            <img id="weather-icon" src="" alt="Weather Icon" />
+          </div>
+          <div class="weather-details">
+            <p id="temperature"></p>
+            <p id="weather-description"></p>
+            <div class="weather-info">
+              <div class="info-item">
+                <i class="fas fa-tint"></i>
+                <span id="humidity"></span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-wind"></i>
+                <span id="wind-speed"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <h3>City Map</h3>
+          <div id="map"></div>
+        </div>
+
+        <div class="forecast-btn-container">
+          <button id="forecast-btn">5-Day Forecast</button>
+        </div>
+      </div>
+
+      <div id="error-message" class="hidden">
+        <p>
+          City not found or error occured while fetching data. Please try again.
+        </p>
+      </div>
+
+      <div class="loading hidden" id="loading">
+        <div class="spinner"></div>
+        <p>Loading weather data...</p>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
